@@ -1,5 +1,4 @@
 ## rcurses :: ncurses bindings for rust
-***
 
 Useful rust bindings to be used in rust.
 
