@@ -1,0 +1,10 @@
+[package]
+name = "rcurses"
+version = "0.5.0"
+edition = "2024"
+
+[dependencies]
+libc = "0.2.171"
+
+[build]
+rustflags = ["-lncurses", "-ltinfo"]
