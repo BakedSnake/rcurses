@@ -13,7 +13,7 @@ cargo add --git https://github.com/bakedsnake/rcurses
 ### Usage
 
 ```rust
-use ncurses::*;
+use rcurses::*;
 use libc::{setlocale, LC_ALL};
 use std::ffi::CString;
 
