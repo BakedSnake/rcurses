@@ -1,6 +1,6 @@
 ## rcurses :: ncurses bindings for rust
 
-Useful rust bindings to be used in rust.
+Useful libncurses bindings to be used in rust.
 
 For more info on how to use ncurses please consider reading the man pages.
 
@@ -18,19 +18,19 @@ use libc::{setlocale, LC_ALL};
 use std::ffi::CString;
 
 fn main() {
-    let locale = CString::new("en_US.UTF-8").unwrap(); => CString
-    let str = CString::new("Hello, world!").unwrap(); => CString
+    let locale = CString::new("en_US.UTF-8").unwrap();
+    let str = CString::new("Hello, world!").unwrap();
 
     unsafe {
-        setlocale(LC_ALL, locale.as_ptr()); <- (category, locale)
-        let win = initscr(); => *mut c_void
+        setlocale(LC_ALL, locale.as_ptr());
+        let win = initscr();
         cbreak();
         noecho();
         noqiflush();
-        keypad(win, true); <- (w, b)
+        keypad(win, true);
 
         // Print "Hello, world!" and wait for input
-        mvprintw(10, 10, str.as_ptr()); <- (y, x, s)
+        mvprintw(10, 10, str.as_ptr());
         wgetch(win);
 
         nocbreak();
