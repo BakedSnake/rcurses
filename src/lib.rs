@@ -172,6 +172,9 @@ unsafe extern "C" {
     /// Set a window attribute.
     pub fn wattrset(w: *mut win, a: c_int) -> c_int;
 
+    /// Change attribute of a given number of characters.
+    pub fn mvwchgat(w: *mut win, y: c_int, x: c_int, n: c_int, a: c_int, p: c_short) -> c_int;
+
     /// Set window colors.
     pub fn wbkgd(w: *mut win, bg: chtype) -> c_int;
 
