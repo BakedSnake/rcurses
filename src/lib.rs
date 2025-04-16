@@ -35,7 +35,11 @@ pub const NCURSES_ATTR_SHIFT:   c_int = 8;
 pub const A_ALTCHARSET:         c_int = ncurses_bits(1, 14);
 pub const A_COLOR:              c_int = ncurses_bits((1 << 8) - 1, 0);
 pub const A_NORMAL:             c_int = ncurses_bits(1, 1);
+pub const A_STANDOUT:           c_int = ncurses_bits(1, 8);
 pub const A_UNDERLINE:          c_int = ncurses_bits(1, 9);
+pub const A_BLINK:              c_int = ncurses_bits(1, 11);
+pub const A_DIM:                c_int = ncurses_bits(1, 12);
+pub const A_BOLD:               c_int = ncurses_bits(1, 13);
 
 // Colors
 pub const COLOR_BLACK:          c_short = 0;
