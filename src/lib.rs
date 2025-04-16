@@ -34,6 +34,7 @@ pub const NCURSES_ATTR_SHIFT:   c_int = 8;
 
 pub const A_ALTCHARSET:         c_int = ncurses_bits(1, 14);
 pub const A_COLOR:              c_int = ncurses_bits((1 << 8) - 1, 0);
+pub const A_NORMAL:             c_int = ncurses_bits(1, 1);
 pub const A_UNDERLINE:          c_int = ncurses_bits(1, 9);
 
 // Colors
@@ -159,6 +160,9 @@ unsafe extern "C" {
 
     /// Set window attributes off.
     pub fn wattroff(w: *mut win, a: c_int) -> c_int;
+
+    /// Set a window attribute.
+    pub fn wattrset(w: *mut win, a: c_int) -> c_int;
 
     /// Set window colors.
     pub fn wbkgd(w: *mut win, bg: chtype) -> c_int;
