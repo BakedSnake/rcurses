@@ -1,5 +1,6 @@
 #![allow(non_camel_case_types)]
-use libc::{c_void, c_int, c_short, c_char};
+#![no_std]
+use core::ffi::{c_void, c_int, c_short, c_char};
 
 // VT100 Symbols
 pub const ACS_ULCORNER:         c_int = ncurses_acs('l');
